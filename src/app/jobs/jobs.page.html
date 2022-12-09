@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>
+      <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+          <ion-button href="../tabs/Inicio" button><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+        </ion-buttons>
+        <ion-label>
+          ¡Bienvenido!
+        </ion-label>
+        <ion-label slot="end"><ion-searchbar [debounce]="1000" (ionChange)="handleChange($event)"></ion-searchbar></ion-label>
+      </ion-toolbar>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+          <ion-button href="../tabs/Inicio" button><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+        </ion-buttons>
+        <ion-label>
+          ¡Bienvenido!
+        </ion-label>
+        <ion-label slot="end"><ion-searchbar [debounce]="1000" (ionChange)="handleChange($event)"></ion-searchbar></ion-label>
+      </ion-toolbar>
+    </ion-toolbar>
+  </ion-header>
+  <ion-text>
+    <h2>Encuentra las mejores oportunidades aqui</h2>
+  </ion-text>
+  <ion-item *ngFor="let job of jobs">
+    <ion-card id="{{job.title}}">
+      <ion-img  alt="Trabajo para postularse {{job.url}}" [src]="job.url" ></ion-img>
+      <ion-card-content>
+        <a button href="{{job.page}}">
+        {{job.title}}
+        </a>
+      </ion-card-content>
+    </ion-card>
+  </ion-item>
+
+  
+</ion-content>

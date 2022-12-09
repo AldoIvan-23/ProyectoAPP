@@ -1,0 +1,53 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>
+      <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+          <ion-button href="/jobs" button><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+        </ion-buttons>
+        <ion-label>
+          ¡Bienvenido!
+        </ion-label>
+        <ion-label slot="end"> <ion-searchbar></ion-searchbar></ion-label>
+      </ion-toolbar>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+          <ion-button href="/jobs" button><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+        </ion-buttons>
+        <ion-label>
+          ¡Bienvenido!
+        </ion-label>
+        <ion-label slot="end"> <ion-searchbar></ion-searchbar></ion-label>
+      </ion-toolbar>
+    </ion-toolbar>
+  </ion-header>
+  <ion-toolbar>
+    <ion-item expand="full">
+      <ion-label>
+        <ion-icon name="location-outline"></ion-icon>
+      </ion-label>
+      <ion-label>Selecciona tu úbicación</ion-label>
+      <ion-label slot="end"><ion-icon name="chevron-forward-outline"></ion-icon></ion-label>
+    </ion-item>
+  </ion-toolbar>  
+  <ion-grid>
+    <ion-card>
+      <ion-img alt="Asistente administrativo" src="../../assets/Principal/Atencion a clientes.jpg"></ion-img>
+      <ion-text>Funciones</ion-text>
+      <ion-text>
+        <ol>
+          <li *ngFor="let job of job">{{job.function}}</li>
+        </ol>
+      </ion-text>
+    </ion-card>
+  </ion-grid>
+
+  
+</ion-content>
